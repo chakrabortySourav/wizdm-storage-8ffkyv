@@ -1,0 +1,22 @@
+@import '~normalize.css/normalize.css';
+@import './theming';
+
+// Uncomment this option to load material icons from the web
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+// Uncomment this option to load fontawsome icons from the web
+@import url('https://use.fontawesome.com/releases/v5.9.0/css/all.css');
+
+// Load the main Ubuntu google font from the web
+//@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+
+$primary: mat-palette($mat-blue);
+$accent:  mat-palette($mat-amber, 900);
+$warn:    mat-palette($mat-red);
+$app-theme: mat-light-theme($primary, $accent, $warn);
+
+// Includes the core theme indepeneted material style
+@include mat-core(); 
+
+// Initialize the global application theme
+@include init-application-theme($app-theme);

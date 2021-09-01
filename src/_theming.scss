@@ -1,0 +1,18 @@
+@import '~@angular/material/theming';
+
+@mixin init-application-theme($theme) {
+
+  // Include all the material theme styles
+  @include angular-material-theme($theme);
+
+  // Defines an additional mat-link class to decorate links diviating
+  // from the strict rules of material design for the sake of clarity
+  .mat-link {
+    cursor: pointer;
+    color: mat-color($primary) !important;
+    text-decoration: underline;
+  }
+
+  // include additional theming here
+
+}
